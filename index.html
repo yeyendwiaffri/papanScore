@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scoreboard Tournament</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="scoreboard" class="scoreboard">
+    <button id="settingsBtn" class="settings-btn" title="Settings">⚙</button>
+
+    <header class="top-area">
+      <img id="organizerLogo" class="organizer-logo" src="https://dummyimage.com/180x180/f5a623/111.png&text=LOGO" alt="Logo Penyelenggara" />
+    </header>
+
+    <section class="teams-area">
+      <div class="team-card">
+        <h1 id="teamAName" class="team-name">BNI<br>JAKARTA</h1>
+        <button id="scoreA" class="score-box">20</button>
+        <div class="sponsor-row">
+          <img class="sponsor-logo sponsor-img" src="https://dummyimage.com/260x90/000/fff.png&text=SPONSOR" alt="Sponsor 1" />
+          <img class="sponsor-logo sponsor-img" src="https://dummyimage.com/260x90/000/fff.png&text=SPONSOR" alt="Sponsor 2" />
+        </div>
+      </div>
+
+      <div class="team-card">
+        <h1 id="teamBName" class="team-name">BNI<br>Surabaya</h1>
+        <button id="scoreB" class="score-box">20</button>
+        <div class="sponsor-row">
+          <img class="sponsor-logo sponsor-img" src="https://dummyimage.com/260x90/000/fff.png&text=SPONSOR" alt="Sponsor 3" />
+          <img class="sponsor-logo sponsor-img" src="https://dummyimage.com/260x90/000/fff.png&text=SPONSOR" alt="Sponsor 4" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Setting Scoreboard</h2>
+        <button id="closeModal" class="close-btn">×</button>
+      </div>
+
+      <label>Nama Tim Kiri</label>
+      <input id="inputTeamA" type="text" value="BNI JAKARTA" />
+
+      <label>Nama Tim Kanan</label>
+      <input id="inputTeamB" type="text" value="BNI Surabaya" />
+
+      <label>Score Awal Tim Kiri</label>
+      <input id="inputScoreA" type="number" value="20" min="0" />
+
+      <label>Score Awal Tim Kanan</label>
+      <input id="inputScoreB" type="number" value="20" min="0" />
+
+      <label>Angka Maksimal</label>
+      <input id="inputMaxScore" type="number" value="99" min="1" />
+
+      <label>Resolusi Tampilan</label>
+      <select id="resolutionSelect">
+        <option value="fullscreen">Full Screen / Auto</option>
+        <option value="1366x768">Laptop 1366 × 768</option>
+        <option value="1920x1080">Full HD 1920 × 1080</option>
+        <option value="1280x720">HD 1280 × 720</option>
+      </select>
+
+      <label>Logo Penyelenggara Turnamen</label>
+      <input id="organizerInput" type="file" accept="image/*" />
+
+      <label>Logo Sponsor</label>
+      <input id="sponsorInput" type="file" accept="image/*" />
+
+      <div class="button-row">
+        <button id="saveSettings" class="primary-btn">Simpan</button>
+        <button id="resetScore" class="secondary-btn">Reset Score</button>
+        <button id="fullscreenBtn" class="secondary-btn">Full Screen</button>
+      </div>
+
+      <p class="hint">Klik angka 1 kali untuk menambah. Tekan angka selama 3 detik untuk mengurangi.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
