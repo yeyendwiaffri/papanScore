@@ -142,11 +142,11 @@ function loadFromStorage() {
   if (!saved) return;
 
   const data = JSON.parse(saved);
-  teamAName.innerHTML = data.teamA || 'BNI<br>JAKARTA';
-  teamBName.innerHTML = data.teamB || 'BNI<br>Surabaya';
+  teamAName.innerHTML = data.teamA || 'By<br>UNTAG';
+  teamBName.innerHTML = data.teamB || 'UNTAG<br>JAYA';
   maxScore = Number(data.maxScore) || 99;
-  setScore(scoreA, data.scoreA || 20);
-  setScore(scoreB, data.scoreB || 20);
+  setScore(scoreA, data.scoreA || 0);
+  setScore(scoreB, data.scoreB || 0);
 
   if (data.organizerLogo) organizerLogo.src = data.organizerLogo;
   if (data.sponsorLogo) sponsorImages.forEach(img => img.src = data.sponsorLogo);
