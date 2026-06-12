@@ -45,8 +45,8 @@ body {
 }
 
 .organizer-logo {
-  width: min(190px, 18vw);
-  height: min(190px, 18vw);
+  width: min(270px, 18vw);
+  height: min(270px, 18vw);
   object-fit: contain;
 }
 
